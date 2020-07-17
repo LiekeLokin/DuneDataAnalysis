@@ -23,7 +23,21 @@ Data organizing scripts are the scripts that prepare the data from CoVadem and R
 # DuneTracking
 DuneTracking tools available in papers:
 - OpenATM, Gutierrez et al. (2018)
-- BedTrackingTool
+- BedTrackingTool, Van der Mark and Blom (2007)
+- BAMBI, Cisneros et al. (2020)
+
+Dune parameters to derive with dune Tracking
+- dune length
+- dune heigth
+- lee slope angle; mean, max, location of the max
+- stoss slope angle; mean, max, location of the max
+- location of the crest
+- location of the trough
+- secondary dunes (TRUE/FALSE)
+    - length and height of secondary dunes/ripples
+
+
 
 
 # dune analysis
+Coupling of the dune parameters and the secondary data, derive trends
