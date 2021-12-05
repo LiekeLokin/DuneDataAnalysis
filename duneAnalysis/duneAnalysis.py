@@ -19,7 +19,7 @@ import numpy as np
 from scipy.interpolate import interpolate
 from scipy.signal import find_peaks, correlate
 
-import wavelets
+# import wavelets
 from wavelets import WaveletAnalysis
 from wavelets import Morlet
 
