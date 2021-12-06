@@ -58,25 +58,23 @@ def replaceNan(a):
 
 # dune Shape analysis
 
-def findCrests(zFilt,Zrec,istart = 0):
+def findCrests(zFilt,Zrec,istart = 0, prominence = 0.1):
     '''
     Find crests in the dune profile
     zFilt: Filtered bed elevation profile (ripples filtered out)
     Zrec: reconstructed bedprofile based on the wavelet spectrum, and the limits of the expected dunes
     istart: start index if not the whole profile is being analysed
     iend: end index if not the whole profile is being analysed
+    prominence: prominence of the found crest location in order for it to be a primary dune
     '''
     
     recCr = find_peaks(Zrec)[0]
-    allCr = find_peaks(zFilt, prominence = 0.1)[0]
-    
-#     print(16500/len(recCr), 16500/len(allCr))
-    
+    allCr = find_peaks(zFilt, prominence = prominence)[0]
+        
     diffMatrix = np.repeat(allCr[:, np.newaxis], len(recCr), axis=1)
     if len(diffMatrix) == 0:
         Mcrests = []
     else:
-#     print(np.argmin(abs(diffMatrix-recCr),axis = 0))
         Mcrests = allCr[np.unique(np.argmin(abs(diffMatrix-recCr), axis = 0))]+istart
     
     return(Mcrests)
