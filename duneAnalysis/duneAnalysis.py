@@ -14,6 +14,8 @@ Requirements:
 
 @author: L.R. Lokin, l.r.lokin@utwente.nl
 """
+import warnings
+
 import numpy as np
 
 from scipy.interpolate import interpolate
@@ -125,6 +127,9 @@ def Wavelet2Dunes(Zbed, Zfilt, M, istart = 0, iend = -1, lowLim = 20, upLim = 30
     
     
     '''
+    dM = np.diff(M).mean()
+    if np.diff(M).max() >= 1.05*dM:
+        warnings.warn(f"dM is not constant, max dM >= dM mean: dM = {dM}, dMmax = {np.diff(M).max}")
     
     if iend == -1:
         iend = len(Zbed)
