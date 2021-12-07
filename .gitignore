@@ -131,5 +131,6 @@ dmypy.json
 # Settings LL
 test.*
 duneParam/
-Example_data/*.ipynb
+Data/*.ipynb
+Data/*.csv
 CreateFigures.ipynb
