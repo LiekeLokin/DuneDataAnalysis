@@ -4,3 +4,7 @@ The functions in duneAnalaysis are generic and can be applied on any bed elevati
 
 The duneAnalysis_WaalNL performs the analysis on bed elevation profiles of the Waal River in the Netherlands. The data will be publisched upon acceptance of the paper written with these scripts (doi). RAW bed elevation data may be requested at Rijkswaterstaat (Ministry of Infrastructure and Watermanagement, the Netherlands)
 
+The duneAnalysis functioans are developed with the following packages:
+- numpy 1.21.4
+- scipy 1.7.3
+- wavelets @ git+https://github.com/LiekeLokin/wavelets@a213d7c307e0a6b5a40cc648d4e3f69c2e77c12b
