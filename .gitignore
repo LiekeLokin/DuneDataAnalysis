@@ -132,3 +132,4 @@ dmypy.json
 test.*
 duneParam/
 Example_data/*.ipynb
+CreateFigures.ipynb
